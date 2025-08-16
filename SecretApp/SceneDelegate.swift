@@ -1,20 +1,22 @@
 import SwiftUI
+import ArchitectureTools
+import App
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-	var window: UIWindow?
+  var window: UIWindow?
 
-	private lazy var navigationController = UINavigationController(
-		rootViewController: UIHostingController(rootView: Text("Hello World!")))
+  let store = Store(initialState: SecretApp.initialState) {
+    SecretApp.body._printChanges()
+  }
 
-	func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-		guard let scene = (scene as? UIWindowScene) else { return }
+  func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+    guard let scene = (scene as? UIWindowScene) else { return }
+    window = UIWindow(windowScene: scene)
+    configureWindow()
+  }
 
-		window = UIWindow(windowScene: scene)
-		configureWindow()
-	}
-
-    func configureWindow() {
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
-    }
+  func configureWindow() {
+    window?.makeKeyAndVisible()
+    window?.rootViewController = AppViewController(store: store)
+  }
 }
