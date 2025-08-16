@@ -37,17 +37,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F1F283272E508F7000028AEA /* SecretAppTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretAppTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1F283272E508F7000028AEA /* SecretApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1F283462E5096E400028AEA /* ArchitectureTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArchitectureTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		F1F283402E50962F00028AEA /* Exceptions for "SecretAppTest" folder in "SecretAppTest" target */ = {
+		F1F283402E50962F00028AEA /* Exceptions for "SecretAppTest" folder in "SecretApp" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = F1F283262E508F7000028AEA /* SecretAppTest */;
+			target = F1F283262E508F7000028AEA /* SecretApp */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -55,7 +55,7 @@
 		F1F283292E508F7000028AEA /* SecretAppTest */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				F1F283402E50962F00028AEA /* Exceptions for "SecretAppTest" folder in "SecretAppTest" target */,
+				F1F283402E50962F00028AEA /* Exceptions for "SecretAppTest" folder in "SecretApp" target */,
 			);
 			path = SecretAppTest;
 			sourceTree = "<group>";
@@ -99,7 +99,7 @@
 		F1F283282E508F7000028AEA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F1F283272E508F7000028AEA /* SecretAppTest.app */,
+				F1F283272E508F7000028AEA /* SecretApp.app */,
 				F1F283462E5096E400028AEA /* ArchitectureTools.framework */,
 			);
 			name = Products;
@@ -118,9 +118,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F1F283262E508F7000028AEA /* SecretAppTest */ = {
+		F1F283262E508F7000028AEA /* SecretApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F1F283322E508F7100028AEA /* Build configuration list for PBXNativeTarget "SecretAppTest" */;
+			buildConfigurationList = F1F283322E508F7100028AEA /* Build configuration list for PBXNativeTarget "SecretApp" */;
 			buildPhases = (
 				F1F283232E508F7000028AEA /* Sources */,
 				F1F283242E508F7000028AEA /* Frameworks */,
@@ -135,11 +135,11 @@
 			fileSystemSynchronizedGroups = (
 				F1F283292E508F7000028AEA /* SecretAppTest */,
 			);
-			name = SecretAppTest;
+			name = SecretApp;
 			packageProductDependencies = (
 			);
 			productName = SecretAppTest;
-			productReference = F1F283272E508F7000028AEA /* SecretAppTest.app */;
+			productReference = F1F283272E508F7000028AEA /* SecretApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F1F283452E5096E400028AEA /* ArchitectureTools */ = {
@@ -184,7 +184,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F1F283222E508F7000028AEA /* Build configuration list for PBXProject "SecretAppTest" */;
+			buildConfigurationList = F1F283222E508F7000028AEA /* Build configuration list for PBXProject "SecretApp" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -201,7 +201,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F1F283262E508F7000028AEA /* SecretAppTest */,
+				F1F283262E508F7000028AEA /* SecretApp */,
 				F1F283452E5096E400028AEA /* ArchitectureTools */,
 			);
 		};
@@ -541,7 +541,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F1F283222E508F7000028AEA /* Build configuration list for PBXProject "SecretAppTest" */ = {
+		F1F283222E508F7000028AEA /* Build configuration list for PBXProject "SecretApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F1F283302E508F7100028AEA /* Debug */,
@@ -550,7 +550,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F1F283322E508F7100028AEA /* Build configuration list for PBXNativeTarget "SecretAppTest" */ = {
+		F1F283322E508F7100028AEA /* Build configuration list for PBXNativeTarget "SecretApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F1F283332E508F7100028AEA /* Debug */,
