@@ -77,6 +77,8 @@
 		F1EF464E2E5210A800AAADD0 /* MyCode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F1EF45742E50D76200AAADD0 /* MyCode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F1EF46512E5210A800AAADD0 /* Scanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EF458E2E50D79F00AAADD0 /* Scanner.framework */; };
 		F1EF46522E5210A800AAADD0 /* Scanner.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F1EF458E2E50D79F00AAADD0 /* Scanner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F1EF46572E521FEE00AAADD0 /* Color+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EF46562E521FEE00AAADD0 /* Color+Helpers.swift */; };
+		F1EF465B2E5220F500AAADD0 /* ContentShape+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EF46592E5220F500AAADD0 /* ContentShape+Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -401,6 +403,8 @@
 		F1EF461B2E520E9800AAADD0 /* ProfileUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProfileUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1EF46452E520FE300AAADD0 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		F1EF46472E520FE300AAADD0 /* ProfileUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUI.swift; sourceTree = "<group>"; };
+		F1EF46562E521FEE00AAADD0 /* Color+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Helpers.swift"; sourceTree = "<group>"; };
+		F1EF46592E5220F500AAADD0 /* ContentShape+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentShape+Helpers.swift"; sourceTree = "<group>"; };
 		F1F283272E508F7000028AEA /* SecretApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -642,6 +646,7 @@
 		F1EF46002E50FA8D00AAADD0 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				F1EF46552E521FDF00AAADD0 /* Helpers */,
 				F1EF46022E50FAA700AAADD0 /* Resources */,
 				F1EF45FF2E50FA8D00AAADD0 /* Asset.swift */,
 			);
@@ -679,6 +684,15 @@
 				F1EF46482E520FE300AAADD0 /* UI */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		F1EF46552E521FDF00AAADD0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F1EF46562E521FEE00AAADD0 /* Color+Helpers.swift */,
+				F1EF46592E5220F500AAADD0 /* ContentShape+Helpers.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		F1F2831E2E508F7000028AEA = {
@@ -1213,7 +1227,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1EF465B2E5220F500AAADD0 /* ContentShape+Helpers.swift in Sources */,
 				F1EF46012E50FA8D00AAADD0 /* Asset.swift in Sources */,
+				F1EF46572E521FEE00AAADD0 /* Color+Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
