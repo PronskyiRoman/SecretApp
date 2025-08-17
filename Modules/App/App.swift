@@ -1,24 +1,35 @@
 import ArchitectureTools
-import Scanner
-import MyCode
+import Profile
 
 @Reducer
-public enum SecretApp {
-  case codeScanner(CodeScanner)
-  case myCode(MyCode)
+public struct SecretApp {
+  @ObservableState
+  public struct State {
+    public var rootScreenState: Profile.State
 
-  public static var body: some ReducerOf<Self> {
-    Reduce { state, action in
-      switch action {
-      default:
-        break
-      }
-
-      return .none
+    public init(root: Profile.State) {
+      rootScreenState = root
     }
-    .ifCaseLet(\.codeScanner, action: \.codeScanner, then: CodeScanner.init)
-    .ifCaseLet(\.myCode, action: \.myCode, then: MyCode.init)
+  }
+
+  @CasePathable
+  public enum AppDelegateAction {
+    case didFinishLaunching
+  }
+
+  @CasePathable
+  public enum Action {
+    case appDelegate(AppDelegateAction)
+    case root(Profile.Action)
+  }
+
+  public init() {}
+
+  public var body: some ReducerOf<Self> {
+    Scope(state: \.rootScreenState, action: \.root, child: Profile.init)
+
+    Reduce { state, action in
+      .none
+    }
   }
 }
-
-extension SecretApp.State: Equatable {}

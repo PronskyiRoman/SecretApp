@@ -1,14 +1,14 @@
 import ArchitectureTools
 
 @Reducer
-public struct MyCode: Sendable {
+public struct MyCode {
   @ObservableState
-  public struct State: Hashable {
+  public struct State {
     public init() {}
   }
 
   @CasePathable
-  public enum Action: Sendable {
+  public enum Action {
     case didAppear
   }
 
@@ -16,7 +16,7 @@ public struct MyCode: Sendable {
 
   public var body: some Reducer<State, Action> {
     Reduce { state, action in
-      return .none
+      .none
     }
   }
 }

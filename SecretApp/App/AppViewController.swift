@@ -1,11 +1,10 @@
 import SwiftUI
 import ArchitectureTools
 import App
-import ScannerUI
-import MyCodeUI
+import ProfileUI
 
 class AppViewController: UINavigationController {
-  let store: StoreOf<SecretApp>
+  @UIBindable var store: StoreOf<SecretApp>
 
   init(store: StoreOf<SecretApp>) {
     self.store = store
@@ -20,12 +19,7 @@ class AppViewController: UINavigationController {
   func setUp() {
     observe { [weak self] in
       guard let self else { return }
-      switch store.case {
-      case let .myCode(store):
-        setViewControllers([MyCodeView(store: store).asController], animated: false)
-      case let .codeScanner(store):
-        setViewControllers([ScannerView(store: store).asController], animated: false)
-      }
+      setViewControllers([ProfileView(store: store.scope(state: \.rootScreenState, action: \.root)).asController], animated: false)
     }
   }
 }

@@ -10,6 +10,11 @@ public struct ScannerView: View {
   }
 
   public var body: some View {
-    Text("Hello, ScannerUI")
+    ZStack {
+      Color.red
+      Button("Hello, ScannerUI") {
+        store.send(.didAppear)
+      }
+    }
   }
 }
