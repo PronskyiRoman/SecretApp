@@ -3,7 +3,7 @@ import ArchitectureTools
 @Reducer
 public struct CodeScanner {
   @ObservableState
-  public struct State {
+  public struct State: Equatable {
     public init() {}
   }
 

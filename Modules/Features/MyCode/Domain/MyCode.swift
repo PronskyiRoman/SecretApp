@@ -3,7 +3,7 @@ import Foundation
 
 @Reducer
 public struct MyCode {
-  public struct Coin {
+  public struct Coin: Equatable {
     public var title: String
     public var image: Data
 
@@ -14,7 +14,7 @@ public struct MyCode {
   }
 
   @ObservableState
-  public struct State {
+  public struct State: Equatable {
     public let name: String
     public let coins: [Coin]
     public let address: String
