@@ -51,6 +51,12 @@
 		F18FB2442E5476B000E04973 /* DeviceHapticFeedbackService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18FB2212E546E9100E04973 /* DeviceHapticFeedbackService.framework */; };
 		F18FB2452E5476B000E04973 /* DeviceHapticFeedbackService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F18FB2212E546E9100E04973 /* DeviceHapticFeedbackService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F18FB2492E547A3000E04973 /* DeviceHapticFeedbackService+Composer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FB2482E547A3000E04973 /* DeviceHapticFeedbackService+Composer.swift */; };
+		F18FB24C2E547E7700E04973 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FB24B2E547E7700E04973 /* Screen.swift */; };
+		F18FB2542E547F4500E04973 /* SecretApp+subscribeDeviceMovements.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FB2532E547F4500E04973 /* SecretApp+subscribeDeviceMovements.swift */; };
+		F18FB2562E547F7200E04973 /* SecretApp+sendHapticFeedBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FB2552E547F7200E04973 /* SecretApp+sendHapticFeedBack.swift */; };
+		F18FB2582E54800A00E04973 /* SecretApp+CodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FB2572E54800A00E04973 /* SecretApp+CodeScanner.swift */; };
+		F18FB25B2E5480E800E04973 /* SecretApp+didFinishLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FB25A2E5480E800E04973 /* SecretApp+didFinishLaunch.swift */; };
+		F18FB25D2E54814E00E04973 /* SecretApp+reduceInternalAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FB25C2E54814E00E04973 /* SecretApp+reduceInternalAction.swift */; };
 		F1CEBC7F2E5228EB002665FF /* Profile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EF460B2E520E8900AAADD0 /* Profile.framework */; };
 		F1CEBC802E5228EB002665FF /* Profile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F1EF460B2E520E8900AAADD0 /* Profile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F1EF45532E50D4B700AAADD0 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EF45522E50D4B700AAADD0 /* AppViewController.swift */; };
@@ -536,6 +542,12 @@
 		F18FB23F2E54731300E04973 /* EventListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListener.swift; sourceTree = "<group>"; };
 		F18FB2422E54769A00E04973 /* DeviceMovementsService+Composer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceMovementsService+Composer.swift"; sourceTree = "<group>"; };
 		F18FB2482E547A3000E04973 /* DeviceHapticFeedbackService+Composer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceHapticFeedbackService+Composer.swift"; sourceTree = "<group>"; };
+		F18FB24B2E547E7700E04973 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		F18FB2532E547F4500E04973 /* SecretApp+subscribeDeviceMovements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecretApp+subscribeDeviceMovements.swift"; sourceTree = "<group>"; };
+		F18FB2552E547F7200E04973 /* SecretApp+sendHapticFeedBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecretApp+sendHapticFeedBack.swift"; sourceTree = "<group>"; };
+		F18FB2572E54800A00E04973 /* SecretApp+CodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecretApp+CodeScanner.swift"; sourceTree = "<group>"; };
+		F18FB25A2E5480E800E04973 /* SecretApp+didFinishLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecretApp+didFinishLaunch.swift"; sourceTree = "<group>"; };
+		F18FB25C2E54814E00E04973 /* SecretApp+reduceInternalAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecretApp+reduceInternalAction.swift"; sourceTree = "<group>"; };
 		F1EF45522E50D4B700AAADD0 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		F1EF455A2E50D53D00AAADD0 /* App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1EF45652E50D57000AAADD0 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -815,6 +827,34 @@
 			path = Composers;
 			sourceTree = "<group>";
 		};
+		F18FB24A2E547E6D00E04973 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				F18FB24B2E547E7700E04973 /* Screen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		F18FB2522E547F2E00E04973 /* Effects */ = {
+			isa = PBXGroup;
+			children = (
+				F18FB2592E54801100E04973 /* Screens */,
+				F18FB2532E547F4500E04973 /* SecretApp+subscribeDeviceMovements.swift */,
+				F18FB25C2E54814E00E04973 /* SecretApp+reduceInternalAction.swift */,
+				F18FB2552E547F7200E04973 /* SecretApp+sendHapticFeedBack.swift */,
+				F18FB25A2E5480E800E04973 /* SecretApp+didFinishLaunch.swift */,
+			);
+			path = Effects;
+			sourceTree = "<group>";
+		};
+		F18FB2592E54801100E04973 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				F18FB2572E54800A00E04973 /* SecretApp+CodeScanner.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		F1EF45512E50D4A300AAADD0 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -826,6 +866,8 @@
 		F1EF45662E50D57000AAADD0 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				F18FB2522E547F2E00E04973 /* Effects */,
+				F18FB24A2E547E6D00E04973 /* Screen */,
 				F1EF45652E50D57000AAADD0 /* App.swift */,
 				F1EF45EA2E50DC7200AAADD0 /* InitialState.swift */,
 			);
@@ -1573,7 +1615,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1EF45EB2E50DC7200AAADD0 /* InitialState.swift in Sources */,
+				F18FB25B2E5480E800E04973 /* SecretApp+didFinishLaunch.swift in Sources */,
+				F18FB2562E547F7200E04973 /* SecretApp+sendHapticFeedBack.swift in Sources */,
+				F18FB2542E547F4500E04973 /* SecretApp+subscribeDeviceMovements.swift in Sources */,
+				F18FB25D2E54814E00E04973 /* SecretApp+reduceInternalAction.swift in Sources */,
 				F1EF45672E50D57000AAADD0 /* App.swift in Sources */,
+				F18FB24C2E547E7700E04973 /* Screen.swift in Sources */,
+				F18FB2582E54800A00E04973 /* SecretApp+CodeScanner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

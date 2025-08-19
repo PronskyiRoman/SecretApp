@@ -1,18 +1,8 @@
 import ArchitectureTools
 import Profile
-import MyCode
-import Scanner
-import DeviceHapticFeedbackService
-import DeviceMovementsService
 
 @Reducer
 public struct SecretApp {
-  @Reducer
-  public enum Screen {
-    case codeScanner(CodeScanner)
-    case myCode(MyCode)
-  }
-
   @ObservableState
   public struct State {
     public var path = StackState<Screen.State>()
@@ -49,20 +39,14 @@ public struct SecretApp {
 
     Reduce { state, action in
       switch action {
-      case .path(.element(id: _, action: .codeScanner(.view(.didTapBack)))):
-        state.path.removeLast()
+      case let .path(.element(id: _, action: .codeScanner(action))):
+        return reduce(into: &state, action: action)
 
       case .appDelegate(.didFinishLaunching):
-        return .merge(
-          subscribeDeviceMovements(),
-          sendDeviceMovement()
-        )
+        return didFinishLaunch()
 
-      case .internal(.didReceiveDeviceMovement):
-        state.path.append(.codeScanner(.init()))
-
-      case .internal(.didRequestHapticFeedback):
-        return sendHapticFeedBack()
+      case let .internal(action):
+        return reduce(into: &state, action: action)
 
       default: break
       }
@@ -70,42 +54,5 @@ public struct SecretApp {
       return .none
     }
     .forEach(\.path, action: \.path)
-  }
-}
-
-extension SecretApp.Screen.State: Equatable {}
-
-private extension SecretApp {
-  func subscribeDeviceMovements() -> Effect<Action> {
-    @Dependency(\.deviceMovementsService) var service
-    return.run { send in
-      await service.subscribe { item in
-        await send(.internal(.didReceiveDeviceMovement))
-        await send(.internal(.didRequestHapticFeedback))
-      }
-    }
-  }
-}
-
-private extension SecretApp {
-  func sendHapticFeedBack() -> Effect<Action> {
-    @Dependency(\.deviceHapticFeedbackService) var service
-    return .run(operation: { _ in
-      try service.sendEvent(.simple)
-    }, catch: { _, _ in
-      // Handle Errors here if there any
-    })
-  }
-}
-
-// MARK: Private implementation to confirm that navigation works properly
-private extension SecretApp {
-  func sendDeviceMovement() -> Effect<Action> {
-    @Dependency(\.deviceMovementsService) var service
-    @Dependency(\.mainQueue) var queue
-    return.run { send in
-      try? await queue.sleep(for: .seconds(3))
-      service.sendEvent(.didReceiveMovement)
-    }
   }
 }
