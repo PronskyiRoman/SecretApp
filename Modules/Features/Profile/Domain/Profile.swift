@@ -18,8 +18,8 @@ public struct Profile {
 
     public init(
       scanner: CodeScanner.State = .init(),
-      myCode: MyCode.State = .init(),
-      selectedSegment: Segment = .codeScanner
+      myCode: MyCode.State,
+      selectedSegment: Segment = .myCode
     ) {
       self.myCode = myCode
       self.scanner = scanner
