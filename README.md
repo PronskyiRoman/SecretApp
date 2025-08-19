@@ -34,7 +34,8 @@ First of all, I would like to thank the reviewers for taking the time to go thro
 
 ## 🧪 Testing  
 - At the moment, there are no unit tests due to time limitations.  
-- However, thanks to the chosen architecture, adding **unit and UI tests** will be straightforward and fast.  
+- However, thanks to the chosen architecture, adding **unit and UI tests** will be straightforward and fast.
+- It would be great to add testing schemes after implementing **unit and UI tests**, and integrate them into the CI/CD pipeline.
 
 ## ❌ What’s Missing (Due to Time Constraints)  
 - iOS **Haptics** implementation.  
