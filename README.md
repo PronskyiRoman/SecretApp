@@ -37,6 +37,16 @@ First of all, I would like to thank the reviewers for taking the time to go thro
 - However, thanks to the chosen architecture, adding **unit and UI tests** will be straightforward and fast.
 - It would be great to add testing schemes after implementing **unit and UI tests**, and integrate them into the CI/CD pipeline.
 
+## 📔 Notes on Implementation
+- The test assignment was limited to 3 days, which is a rather tight timeframe for building an application with the given technology stack.
+- The most time-consuming part was setting up navigation. My prior experience was primarily with SwiftUI navigation, while this task required integrating TCA with UIKit navigation. This demanded additional research and adaptation.
+- Implementing the QR Scanner Camera Hood UI turned out to be challenging. There was no quick "out-of-the-box" solution for building a custom camera overlay, so I had to spend extra time on exploration and manual implementation.
+- I had only a surface-level experience with QR code generation before. Creating a QR code itself is straightforward, but once customization comes into play (styling, design), the lack of prior in-depth knowledge became a bottleneck.
+- For such cases, it is possible to use third-party libraries:
+  - [QRScanner](https://github.com/mercari/QRScanner) for scanner implementation.
+  - [QRCode](https://github.com/dagronf/QRCode) for QR code generation and customization.
+  However, it wasn’t clear whether using external dependencies was acceptable in the context of this assignment. Therefore, I opted to implement the functionality manually.
+
 ## ❌ What’s Missing (Due to Time Constraints)  
 - iOS **Haptics** implementation.  
 - iOS **Device Shake** interaction implementation. 
