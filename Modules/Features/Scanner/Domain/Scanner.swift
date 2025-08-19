@@ -8,8 +8,15 @@ public struct CodeScanner {
   }
 
   @CasePathable
-  public enum Action {
-    case didAppear
+  public enum Action: ViewAction {
+    case view(ViewAction)
+
+    @CasePathable
+    public enum ViewAction {
+      case didTapOpenGallery
+      case didTapFlashlight
+      case didTapBack
+    }
   }
 
   public init() {}
