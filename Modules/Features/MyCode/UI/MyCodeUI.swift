@@ -31,6 +31,7 @@ private extension MyCodeView {
         .padding(.top, 12)
       Spacer()
     }
+    .navigationBarBackButtonHidden()
     .frame(maxWidth: .infinity, maxHeight: .infinity)
     .background { background }
     .toolbar { toolbar }

@@ -31,6 +31,7 @@ private extension ScannerView {
         }
       })
       .toolbar { toolbar }
+      .navigationBarBackButtonHidden()
   }
 
   var qrCodeScannerHood: some View {
